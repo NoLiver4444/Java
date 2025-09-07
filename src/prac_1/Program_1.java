@@ -1,7 +1,6 @@
 package prac_1;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class Program_1 {
     public static void main(String[] args) {

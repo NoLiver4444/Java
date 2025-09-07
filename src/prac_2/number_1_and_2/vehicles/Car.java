@@ -1,9 +1,9 @@
-package prac_2.number_1.vehicles;
+package prac_2.number_1_and_2.vehicles;
 
 public class Car {
+    protected String engineType;
     private String ownerName;
     private String insuranceNumber;
-    protected String engineType;
 
     public Car() {
         this.ownerName = "Unknown";
@@ -21,20 +21,20 @@ public class Car {
         return ownerName;
     }
 
-    public String getInsuranceNumber() {
-        return insuranceNumber;
-    }
-
-    public String getEngineType() {
-        return engineType;
-    }
-
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
     }
 
+    public String getInsuranceNumber() {
+        return insuranceNumber;
+    }
+
     public void setInsuranceNumber(String insuranceNumber) {
         this.insuranceNumber = insuranceNumber;
+    }
+
+    public String getEngineType() {
+        return engineType;
     }
 
     public void setEngineType(String engineType) {

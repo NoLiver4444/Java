@@ -1,6 +1,6 @@
 package prac_1;
 
-record Car (String model, String license, String color, int year) {
+record Car(String model, String license, String color, int year) {
     public Car() {
         this("None", "None", "None", 0);
     }
@@ -23,8 +23,8 @@ public class Program_3 {
         Car car_2 = new Car();
         Car car_3 = new Car("Audi", "Black", 2022);
 
-        System.out.println(car_1.toString() + "\n");
-        System.out.println(car_2.toString() + "\n");
-        System.out.println(car_3.toString() + "\n");
+        System.out.println(car_1 + "\n");
+        System.out.println(car_2 + "\n");
+        System.out.println(car_3 + "\n");
     }
 }

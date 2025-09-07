@@ -1,4 +1,4 @@
-package prac_2.number_1.vehicles;
+package prac_2.number_1_and_2.vehicles;
 
 public class ElectricCar extends Car {
     private int batteryCapacity;
