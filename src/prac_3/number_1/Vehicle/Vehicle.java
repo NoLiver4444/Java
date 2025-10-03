@@ -1,13 +1,13 @@
-package prac_2.number_3.vehicles;
+package prac_3.number_1.Vehicle;
 
 public abstract class Vehicle {
+    protected String model;
+    protected String license;
+    protected String color;
+    protected int year;
+    protected String ownerName;
+    protected String insuranceNumber;
     protected String engineType;
-    private String model;
-    private String license;
-    private String color;
-    private int year;
-    private String ownerName;
-    private String insuranceNumber;
 
     public Vehicle() {
         this.model = "Unknown";
@@ -90,7 +90,13 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return "model - " + getModel() + "\nlicense - " + getLicense() + "\ncolor - " + getColor() + "\nyear - " + getYear() +
-                "\nownerName - " + getOwnerName() + "\ninsuranceNumber - " + getInsuranceNumber() + "\nengineType - " + getEngineType();
+        return "Vehicle Type: " + vehicleType() + "\n" +
+                "Model: " + model + "\n" +
+                "License: " + license + "\n" +
+                "Color: " + color + "\n" +
+                "Year: " + year + "\n" +
+                "Owner: " + ownerName + "\n" +
+                "Insurance: " + insuranceNumber + "\n" +
+                "Engine: " + engineType;
     }
 }

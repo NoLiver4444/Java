@@ -18,7 +18,6 @@ public class Car extends Vehicle {
 
     @Override
     public String toString() {
-        return "model - " + getModel() + "\nlicense - " + getLicense() + "\ncolor - " + getColor() + "\nyear - " + getYear() +
-                "\nownerName - " + getOwnerName() + "\ninsuranceNumber - " + getInsuranceNumber() + "\nengineType - " + getEngineType();
+        return super.toString();
     }
 }

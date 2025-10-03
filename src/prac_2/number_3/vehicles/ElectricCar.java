@@ -29,7 +29,6 @@ public class ElectricCar extends Car {
 
     @Override
     public String toString() {
-        return "model - " + getModel() + "\nlicense - " + getLicense() + "\ncolor - " + getColor() + "\nyear - " + getYear() +
-                "\nownerName - " + getOwnerName() + "\ninsuranceNumber - " + getInsuranceNumber() + "\nengineType - " + getEngineType() + "\nbatteryCapacity - " + this.batteryCapacity;
+        return super.toString() + "\nbatteryCapacity - " + this.batteryCapacity;
     }
 }
