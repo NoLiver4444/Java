@@ -1,6 +1,6 @@
 package prac_4.number_1;
 
-public class GeometricObject {
+abstract class GeometricObject implements Comparable<GeometricObject> {
     private String color = "white";
     private boolean filled = false;
 
@@ -25,6 +25,23 @@ public class GeometricObject {
 
     public void setFilled(boolean filled) {
         this.filled = filled;
+    }
+
+    public abstract double getArea();
+
+    public abstract double getPerimeter();
+
+    @Override
+    public int compareTo(GeometricObject o) {
+        return Double.compare(this.getArea(), o.getArea());
+    }
+
+    public static GeometricObject max(GeometricObject o1, GeometricObject o2) {
+        if (o1.compareTo(o2) > 0) {
+            return o1;
+        } else {
+            return o2;
+        }
     }
 
     @Override

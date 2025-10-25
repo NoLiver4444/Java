@@ -9,15 +9,23 @@ public class Triangle extends GeometricObject {
         super();
     }
 
-    public Triangle(double side1, double side2, double side3) {
+    public Triangle(double side1, double side2, double side3)
+    throws IllegalTriangleException {
         super();
+        if (!isValideTriangle(side1, side2, side3)) {
+            throw new IllegalTriangleException(side1, side2, side3);
+        }
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
     }
 
-    public Triangle(double side1, double side2, double side3, String color, boolean filled) {
+    public Triangle(double side1, double side2, double side3, String color, boolean filled)
+    throws IllegalTriangleException {
         super(color, filled);
+        if (!isValideTriangle(side1, side2, side3)) {
+            throw new IllegalTriangleException(side1, side2, side3);
+        }
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -35,13 +43,22 @@ public class Triangle extends GeometricObject {
         return side3;
     }
 
+    @Override
     public double getArea() {
         double s = getPerimeter() / 2;
         return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
     }
 
+    @Override
     public double getPerimeter() {
         return side1 + side2 + side3;
+    }
+
+    private boolean isValideTriangle(double side1, double side2, double side3) {
+        return (side1 + side2 > side3) &&
+                (side1 + side3 > side2) &&
+                (side2 + side3 > side1) &&
+                (side1 > 0) && (side2 > 0) && (side3 > 0);
     }
 
     @Override
